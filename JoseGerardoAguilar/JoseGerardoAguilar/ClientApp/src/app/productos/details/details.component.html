@@ -1,0 +1,25 @@
+<div class="container">
+  <br />
+  <h3>Detalle Producto</h3>
+  <br />
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col">
+          <h4>{{ producto.name }}</h4>
+        </div>
+        <div class="col text-right">
+          <a href="#" routerLink="/productos/list" class="btn btn-secondary btn-sm">Back To Productos</a>
+        </div>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Id:</b> {{ producto.id }}</li>
+      <li class="list-group-item"><b>Nombre:</b> {{ producto.name }}</li>
+      <li class="list-group-item"><b>Descripcion:</b> {{ producto.description }}</li>
+      <li class="list-group-item"><b>Categoria:</b> {{ producto.category }}</li>
+      <li class="list-group-item"><b>Precio:</b> {{ producto.price }}</li>
+      <li class="list-group-item"><b>Cantidad:</b> {{ producto.quantity }}</li>
+    </ul>
+  </div>
+</div>

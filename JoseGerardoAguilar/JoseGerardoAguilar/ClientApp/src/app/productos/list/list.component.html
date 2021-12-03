@@ -1,0 +1,36 @@
+<div class="container">
+  <br />
+  <div class="row">
+    <div class="col">
+      <h3>Productos</h3>
+    </div>
+    <div class="col text-right">
+      <a href="#" routerLink="/productos/create/" class="btn btn-success btn-sm">Create New</a>
+    </div>
+  </div>
+  <br />
+  <table class="table table-bordered table-sm">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Categoria</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th width="200px"></th>
+    </tr>
+    <tr *ngFor="let producto of productos">
+      <td>{{ producto.id }}</td>
+      <td>{{ producto.name }}</td>
+      <td>{{ producto.description }}</td>
+      <td>{{ producto.category }}</td>
+      <td>{{ producto.price }}</td>
+      <td>{{ producto.quantity }}</td>
+      <td class="text-right">
+        <a href="#" [routerLink]="['/productos/', producto.id, 'details']" class="btn btn-info btn-sm">View</a>
+        <a href="#" [routerLink]="['/productos/', producto.id, 'edit']" class="btn btn-primary btn-sm">Edit</a>
+        <button type="button" (click)="deleteProducto(producto.id)" class="btn btn-danger btn-sm">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
